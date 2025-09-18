@@ -1,0 +1,28 @@
+﻿@model DenemeYapiyorum.Models.Araba
+@{
+    ViewData["Title"] = "Güncelle";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Araba Güncelleme Sayfası</h1>
+
+<form asp-action="Guncelle" method="post">
+    <input asp-for="ArabaId" type="hidden" />
+
+    <div class="mb-3">
+        <label>Araba Adı</label>
+        <input asp-for="ArabaAdi" class="form-control" placeholder="Güncellenen Araba Adı" />
+    </div>
+
+    <div class="mb-3">
+        <label>Araba Rengi</label>
+        <input asp-for="ArabaRengi" class="form-control" placeholder="Güncellenen Araba Rengi" />
+    </div>
+
+    <div class="mb-3">
+        <label>Araba Modeli</label>
+        <input asp-for="ArabaModeli" class="form-control" placeholder="Güncellenen Araba Modeli" />
+    </div>
+
+    <button type="submit" class="btn btn-success">Güncelle</button>
+</form>

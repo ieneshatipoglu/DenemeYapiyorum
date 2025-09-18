@@ -1,0 +1,39 @@
+﻿@using System.Linq
+@model IEnumerable<DenemeYapiyorum.Models.Araba>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Arabanın Adı</th>
+            <th>Rengi</th>
+            <th>Modeli</th>
+            <th>###</th>
+            <th>###</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var araba in Model)
+        {
+            <tr>
+                <td>@araba.ArabaAdi</td>
+                <td>@araba.ArabaRengi</td>
+                <td>@araba.ArabaModeli</td>
+                <td>
+                    <a href="/Araba/Guncelle/@araba.ArabaId" class="btn btn-primary">
+                        Güncelle
+                    </a>
+                <td>
+                    <a href="/Araba/Delete/@araba.ArabaId" class="btn btn-danger">
+                        Sil
+                    </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+

@@ -1,0 +1,41 @@
+﻿@using System.Linq
+@model IEnumerable<DenemeYapiyorum.Models.Kisi>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            
+            <th>Kişinin Adı</th>
+            <th>Soyadı</th>
+            <th>Tcsi</th>
+            <th>###</th>
+            <th>###</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var kisi in Model)
+        {
+            <tr>
+                <td>@kisi.KisiAdi</td>
+                <td>@kisi.KisiSoyadi</td>
+                <td>@kisi.KisiTc</td>
+                <td>
+                    <a href="/Kisi/Update/@kisi.KisiId" class="btn btn-primary">
+                        Güncelle
+                        </a>
+                        </td>
+               <td>
+                <td><a href="/Kisi/Delete/@kisi.KisiId" class="btn btn-danger">
+                    Sil
+                    </a>
+                    </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+

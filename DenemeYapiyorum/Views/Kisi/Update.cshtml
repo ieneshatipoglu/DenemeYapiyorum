@@ -1,0 +1,20 @@
+﻿@model DenemeYapiyorum.Models.Kisi
+@{
+    ViewData["Title"] = "Update";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Güncelleme Sayfası</h1>
+
+<br />
+
+<form action="/Kisi/Update" method="post">
+    <input type="hidden" name="KisiId" value="@Model.KisiId"/> 
+    <input type="text" name="KisiAdi" value="@Model.KisiAdi" placeholder="Güncellenen Kişinin Adı"/>
+    <input type="text" name="KisiSoyadi" value="@Model.KisiSoyadi" placeholder="Güncellenen Kişinin Soyadı" />
+
+    <input type="text" name="KisiTc" value="@Model.KisiTc" placeholder="Güncellenen Kişinin TC" />
+
+    <input type="submit" value="Güncelle" class="btn btn-success"/>     
+</form>
+

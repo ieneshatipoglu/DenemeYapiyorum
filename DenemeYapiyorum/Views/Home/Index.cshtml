@@ -1,0 +1,50 @@
+﻿@model DenemeYapiyorum.Models.Listeleme
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="container mt-4">
+    <h2 class="text-center text-primary fw-bold mb-4">Kişiler</h2>
+    <table class="table table-bordered table-striped text-center shadow-sm">
+        <thead class="table-dark">
+            <tr>
+                <th>Ad</th>
+                <th>Soyad</th>
+                <th>TC</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var k in Model.Kisiler)
+            {
+                <tr>
+                    <td>@k.KisiAdi</td>
+                    <td>@k.KisiSoyadi</td>
+                    <td>@k.KisiTc</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <hr class="my-5" />
+
+    <h2 class="text-center text-success fw-bold mb-4">Arabalar</h2>
+    <table class="table table-hover table-bordered text-center shadow-sm">
+        <thead class="table-dark">
+            <tr>
+                <th>Ad</th>
+                <th>Renk</th>
+                <th>Model</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var a in Model.Arabalar)
+            {
+                <tr>
+                    <td>@a.ArabaAdi</td>
+                    <td>@a.ArabaRengi</td>
+                    <td>@a.ArabaModeli</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

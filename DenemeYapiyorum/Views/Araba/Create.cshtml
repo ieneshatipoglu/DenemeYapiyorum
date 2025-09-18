@@ -1,0 +1,27 @@
+﻿@model DenemeYapiyorum.Models.Araba
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1 class="text-center text-danger">Yeni Araç Ekleme Sayfası</h1>
+
+<form asp-action="Create" method="post">
+    <div class="mb-3">
+        <label>Arabanın Adı</label>
+        <input asp-for="ArabaAdi" class="form-control" placeholder="Arabanın Adını Giriniz" />
+    </div>
+
+    <div class="mb-3">
+        <label>Rengi</label>
+        <input asp-for="ArabaRengi" class="form-control" placeholder="Arabanın Rengini Giriniz" />
+    </div>
+
+    <div class="mb-3">
+        <label>Modeli</label>
+        <input asp-for="ArabaModeli" class="form-control" placeholder="Arabanın Modelini Giriniz" />
+    </div>
+
+    <input type="submit" value="Kaydet" class="btn btn-success" />
+</form>

@@ -1,0 +1,27 @@
+﻿@model DenemeYapiyorum.Models.Kisi
+
+@{
+    ViewData["Title"] = "KisiEkle";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1 class="text-center text-danger">Yeni Kişi Ekleme Sayfası</h1>
+
+<form asp-action="KisiEkle" method="post">
+    <div class="mb-3">
+        <label>Kişinin Adı</label>
+        <input asp-for="KisiAdi" class="form-control" placeholder="Kişinin Adını Giriniz" />
+    </div>
+
+    <div class="mb-3">
+        <label>Soyadı</label>
+        <input asp-for="KisiSoyadi" class="form-control" placeholder="Kişinin Soyadını Giriniz" />
+    </div>
+
+    <div class="mb-3">
+        <label>Tc</label>
+        <input asp-for="KisiTc" class="form-control" placeholder="Kişinin TC Giriniz" />
+    </div>
+
+    <input type="submit" value="Kaydet" class="btn btn-success" />
+</form>
